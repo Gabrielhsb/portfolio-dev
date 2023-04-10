@@ -1,10 +1,15 @@
 import Navbar from "@/components/Navbar";
-
+import { ThemeProvider } from "next-themes";
+import SectionHero from "@/components/SectionHero";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <h1 className="">Hello wolrd</h1>
+      <ThemeProvider enableSystem={true} attribute="class">
+        <Navbar />
+        <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
+          <SectionHero />
+        </main>
+      </ThemeProvider>
     </>
   );
 }
