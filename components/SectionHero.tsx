@@ -27,8 +27,8 @@ export default function SectionHero() {
             <span className="font-semibold text-teal-600">
               Frontend Developer{" "}
             </span>
-            and I work as a web developer since 2020, I have a Bachelor&#39;s
-            degree in Computer science.
+            I&#39;ve been working as a web developer since 2020. I have a
+            Bachelor&#39;s degree in Computer Science.
           </p>
           <Link
             to="projects"

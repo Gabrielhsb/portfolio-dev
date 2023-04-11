@@ -6,12 +6,14 @@ const skills = [
   { name: "CSS" },
   { name: "JavaScript" },
   { name: "TypeScript" },
-  { name: "Styled Componets" },
+  { name: "Styled Components" },
   { name: "React" },
   { name: "Next.js" },
   { name: "Git" },
   { name: "GitHub" },
-  { name: "Jupyter Notebooks" },
+  { name: "Figma" },
+  { name: "SASS" },
+  { name: "Agile methodologies" },
 ];
 
 export default function SectionAbout() {

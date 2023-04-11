@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes";
 import SectionHero from "@/components/SectionHero";
 import SectionAbout from "@/components/SectionAbout";
 import SectionProjects from "@/components/SectionProjects";
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
@@ -12,6 +13,7 @@ export default function Home() {
           <SectionHero />
           <SectionAbout />
           <SectionProjects />
+          <Footer />
         </main>
       </ThemeProvider>
     </>
