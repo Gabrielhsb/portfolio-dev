@@ -65,7 +65,7 @@ export default function Navbar() {
                   <Link
                     key={id}
                     to={item.page}
-                    className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-100"
+                    className="block lg:inline-block text-neutral-900 hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
                   >
                     {item.label}
                   </Link>
