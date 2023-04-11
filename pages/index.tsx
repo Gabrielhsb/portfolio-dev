@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "next-themes";
 import SectionHero from "@/components/SectionHero";
 import SectionAbout from "@/components/SectionAbout";
+import SectionProjects from "@/components/SectionProjects";
 export default function Home() {
   return (
     <>
@@ -10,6 +11,7 @@ export default function Home() {
         <main className="mx-auto max-w-3xl px-4 sm:px-6 md:max-w-5xl ">
           <SectionHero />
           <SectionAbout />
+          <SectionProjects />
         </main>
       </ThemeProvider>
     </>
