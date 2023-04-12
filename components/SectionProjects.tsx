@@ -8,11 +8,34 @@ const projects = [
   {
     name: "Dev Portifolio",
     description:
-      "This project is a web developer portfolio created with the aim of showcasing my skills and projects to potential employers and collaborators. The portfolio is built using modern technologies such as TypeScript, Tailwind, Next.js, and React with a responsive design that adapts to different devices.",
+      "This project is a web developer portfolio created with the aim of showcasing my skills and projects. The portfolio is built using modern technologies such as TypeScript, Tailwind, Next.js, and React with a responsive design that adapts to different devices.",
     image: "/dev-portifolio.png",
-    github:
-      "https://github.com/Gabrielhsb/portfolio-dev/tree/develop/components",
-    link: "coming soon",
+    github: "https://github.com/Gabrielhsb/portfolio-dev/",
+    link: "https://gabriel-portfolio-sepia.vercel.app/",
+  },
+  {
+    name: "Recone",
+    description:
+      "Our project aims to combat ableism, discrimination, and social prejudice against neurodivergent people. To achieve this, we seek to break down prejudices and provide professional recognition for these individuals.",
+    image: "/recone-portifolio.png",
+    github: "https://github.com/Gabrielhsb/recone-frontend",
+    link: "#",
+  },
+  {
+    name: "Podcastr",
+    description:
+      "The  project is a web application developed in Next.js that consumes a podcast API and allows the playback of these contents directly on the page. With a modern and intuitive design, the user can easily navigate through the episodes and choose which ones to listen to.",
+    image: "/podcast-portifolio.png",
+    github: "https://github.com/Gabrielhsb/Podcastr",
+    link: "#",
+  },
+  {
+    name: "Widget Feedback",
+    description:
+      "A widget developed to be used on web pages that require an option for users to report a bug or suggest an improvement. Developed as a challenge/study in NLW 2022.",
+    image: "/widget-portifolio.png",
+    github: " https://github.com/Gabrielhsb/Widget-Feedback",
+    link: "#",
   },
 ];
 
@@ -53,12 +76,14 @@ export default function SectionProjects() {
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />
                       </Link>
-                      <Link href={project.link} target="_blank">
-                        <BsArrowUpRightSquare
-                          size={30}
-                          className="hover:-translate-y-1 transition-transform cursor-pointer"
-                        />
-                      </Link>
+                      {project.link !== "#" && (
+                        <Link href={project.link} target="_blank">
+                          <BsArrowUpRightSquare
+                            size={30}
+                            className="hover:-translate-y-1 transition-transform cursor-pointer"
+                          />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
