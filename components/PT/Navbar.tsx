@@ -25,7 +25,9 @@ const NAV_ITEMS: Array<NavItem> = [
     page: "#projects",
   },
 ];
-
+function handleNavigation() {
+  window.location.href = "/En";
+}
 export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
@@ -59,7 +61,7 @@ export default function Navbar() {
               navbar ? "block" : "hidden"
             }`}
           >
-            <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 mr:space-x-6">
               {NAV_ITEMS.map((item, id) => {
                 return (
                   <Link
@@ -74,22 +76,25 @@ export default function Navbar() {
 
               {currentTheme === "dark" ? (
                 <button
-                  className="bg-slate-100 p-2 rounded-xl"
+                  className="bg-slate-100 p-2 rounded-xl mr-5"
                   onClick={() => setTheme("ligh")}
                 >
                   <RiSunLine size={25} color="black" />
                 </button>
               ) : (
                 <button
-                  className="bg-slate-100 p-2 rounded-xl"
+                  className="bg-slate-100 p-2 rounded-xl mr-5"
                   onClick={() => setTheme("dark")}
                 >
                   <RiMoonFill size={25} color="black" />
                 </button>
               )}
-              <Link href="/En" className="bg-slate-100 p-2 rounded-xl">
+              <button
+                onClick={() => handleNavigation()}
+                className="bg-slate-100 p-2 rounded-xl "
+              >
                 <RiTranslate size={25} color="black" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>
