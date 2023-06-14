@@ -1,8 +1,8 @@
-import Navbar from "@/components/Navbar";
-import SectionHero from "@/components/SectionHero";
-import SectionAbout from "@/components/SectionAbout";
-import SectionProjects from "@/components/SectionProjects";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/PT/Navbar";
+import SectionHero from "@/components/PT/SectionHero";
+import SectionAbout from "@/components/PT/SectionAbout";
+import SectionProjects from "@/components/PT/SectionProjects";
+import Footer from "@/components/PT/Footer";
 export default function Home() {
   return (
     <>
