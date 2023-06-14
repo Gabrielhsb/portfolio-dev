@@ -26,10 +26,12 @@ const NAV_ITEMS: Array<NavItem> = [
   },
 ];
 
+function handleNavigation() {
+  window.location.href = "/";
+}
 export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
-  const pathname = usePathname();
   const [navbar, setNavbar] = useState<boolean>(false);
 
   return (
@@ -74,22 +76,25 @@ export default function Navbar() {
 
               {currentTheme === "dark" ? (
                 <button
-                  className="bg-slate-100 p-2 rounded-xl"
+                  className="bg-slate-100 p-2 rounded-xl mr-5"
                   onClick={() => setTheme("ligh")}
                 >
                   <RiSunLine size={25} color="black" />
                 </button>
               ) : (
                 <button
-                  className="bg-slate-100 p-2 rounded-xl"
+                  className="bg-slate-100 p-2 rounded-xl mr-5"
                   onClick={() => setTheme("dark")}
                 >
                   <RiMoonFill size={25} color="black" />
                 </button>
               )}
-              <Link href="/" className="bg-slate-100 p-2 rounded-xl">
+              <button
+                onClick={() => handleNavigation()}
+                className="bg-slate-100 p-2 rounded-xl"
+              >
                 <RiTranslate size={25} color="black" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>
